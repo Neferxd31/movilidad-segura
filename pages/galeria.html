@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galería – Movilidad Segura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/styles.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar__inner">
+    <a class="navbar__logo" href="../index.html">
+      <div class="semaforo">
+        <span class="semaforo__dot semaforo__dot--rojo"></span>
+        <span class="semaforo__dot semaforo__dot--amarillo"></span>
+        <span class="semaforo__dot semaforo__dot--verde"></span>
+      </div>
+      Movilidad Segura
+    </a>
+    <nav class="navbar__menu">
+      <a class="navbar__link" href="../index.html">Inicio</a>
+      <a class="navbar__link" href="sobre-proyecto.html">El Proyecto</a>
+      <a class="navbar__link" href="cartillas.html">Cartillas</a>
+      <a class="navbar__link active" href="galeria.html">Galería</a>
+      <a class="navbar__link" href="actividades.html">Actividades</a>
+      <a class="navbar__link navbar__link--cta" href="contacto.html">Contacto</a>
+    </nav>
+    <button class="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="page-hero__shapes">
+    <div class="page-hero__shape page-hero__shape--1"></div>
+    <div class="page-hero__shape page-hero__shape--2"></div>
+  </div>
+  <div class="container page-hero__content">
+    <nav class="breadcrumb">
+      <a href="../index.html">Inicio</a><span>›</span>
+      <span>Galería</span>
+    </nav>
+    <span class="badge badge--white">
+      <i class="fa-solid fa-camera"></i> Registro Fotográfico
+    </span>
+    <h1>Galería del Proyecto</h1>
+    <p>Imágenes de las actividades educativas realizadas dentro del proyecto de Movilidad Segura. Haz clic en cualquier foto para ampliarla.</p>
+  </div>
+</header>
+
+<!-- GALERÍA -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header text-center fade-in">
+      <span class="badge badge--verde">
+        <i class="fa-solid fa-images"></i> Actividades en Imágenes
+      </span>
+      <h2>Momentos del Proyecto</h2>
+      <p>Capturando el aprendizaje, el compromiso y la alegría de nuestros estudiantes en cada actividad de educación vial.</p>
+    </div>
+
+    <div class="gallery-grid fade-in">
+      <div class="gallery-item" data-src="../img/galeria1.jpg" data-caption="Charla de movilidad segura">
+        <div class="gallery-placeholder">
+          <i class="fa-solid fa-chalkboard-user"></i>
+          <span>Charla Educativa</span>
+        </div>
+        <div class="gallery-item__overlay">
+          <span><i class="fa-solid fa-magnifying-glass-plus"></i> &nbsp;Charla Educativa</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-src="../img/galeria2.jpg" data-caption="Taller de señales de tránsito">
+        <div class="gallery-placeholder">
+          <i class="fa-solid fa-traffic-light"></i>
+          <span>Señales de Tránsito</span>
+        </div>
+        <div class="gallery-item__overlay">
+          <span><i class="fa-solid fa-magnifying-glass-plus"></i> &nbsp;Señales de Tránsito</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-src="../img/galeria3.jpg" data-caption="Estudiantes aprendiendo normas viales">
+        <div class="gallery-placeholder">
+          <i class="fa-solid fa-children"></i>
+          <span>Estudiantes</span>
+        </div>
+        <div class="gallery-item__overlay">
+          <span><i class="fa-solid fa-magnifying-glass-plus"></i> &nbsp;Estudiantes Aprendiendo</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-src="../img/galeria4.jpg" data-caption="Taller práctico de movilidad">
+        <div class="gallery-placeholder">
+          <i class="fa-solid fa-people-group"></i>
+          <span>Taller Práctico</span>
+        </div>
+        <div class="gallery-item__overlay">
+          <span><i class="fa-solid fa-magnifying-glass-plus"></i> &nbsp;Taller Práctico</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-src="../img/galeria5.jpg" data-caption="Charla sobre seguridad vial">
+        <div class="gallery-placeholder">
+          <i class="fa-solid fa-microphone"></i>
+          <span>Charla Especial</span>
+        </div>
+        <div class="gallery-item__overlay">
+          <span><i class="fa-solid fa-magnifying-glass-plus"></i> &nbsp;Charla Especial</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-src="../img/galeria6.jpg" data-caption="Actividad de simulacro vial">
+        <div class="gallery-placeholder">
+          <i class="fa-solid fa-road"></i>
+          <span>Simulacro Vial</span>
+        </div>
+        <div class="gallery-item__overlay">
+          <span><i class="fa-solid fa-magnifying-glass-plus"></i> &nbsp;Simulacro Vial</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-src="../img/galeria7.jpg" data-caption="Actividad de educación vial">
+        <div class="gallery-placeholder">
+          <i class="fa-solid fa-person-walking"></i>
+          <span>Educación Vial</span>
+        </div>
+        <div class="gallery-item__overlay">
+          <span><i class="fa-solid fa-magnifying-glass-plus"></i> &nbsp;Educación Vial</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-src="../img/galeria8.jpg" data-caption="Proyecto escolar en acción">
+        <div class="gallery-placeholder">
+          <i class="fa-solid fa-school"></i>
+          <span>Proyecto Escolar</span>
+        </div>
+        <div class="gallery-item__overlay">
+          <span><i class="fa-solid fa-magnifying-glass-plus"></i> &nbsp;Proyecto Escolar</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-src="../img/galeria9.jpg" data-caption="Aprendizaje en movimiento">
+        <div class="gallery-placeholder">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>Aprendizaje</span>
+        </div>
+        <div class="gallery-item__overlay">
+          <span><i class="fa-solid fa-magnifying-glass-plus"></i> &nbsp;Aprendizaje</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info cómo agregar fotos
+    <div class="aviso aviso--azul fade-in" style="margin-top:40px;">
+      <div class="aviso__icon"><i class="fa-solid fa-circle-info"></i></div>
+      <div class="aviso__text">
+        <h4>¿Cómo agregar fotos reales?</h4>
+        <p>Coloca tus fotos en la carpeta <code>img/</code> con los nombres <code>galeria1.jpg</code>, <code>galeria2.jpg</code>... y actualiza los atributos <code>data-src</code> de cada elemento de la galería.</p>
+      </div>
+    </div>
+  </div> -->
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="navbar__logo" href="../index.html" style="margin-bottom:16px;display:inline-flex;">
+          <div class="semaforo">
+            <span class="semaforo__dot semaforo__dot--rojo"></span>
+            <span class="semaforo__dot semaforo__dot--amarillo"></span>
+            <span class="semaforo__dot semaforo__dot--verde"></span>
+          </div>
+          Movilidad Segura
+        </a>
+        <p>Proyecto pedagógico de educación vial para la comunidad escolar.</p>
+      </div>
+      <div class="footer__col">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="../index.html"><i class="fa-solid fa-chevron-right"></i> Inicio</a></li>
+          <li><a href="sobre-proyecto.html"><i class="fa-solid fa-chevron-right"></i> El Proyecto</a></li>
+          <li><a href="cartillas.html"><i class="fa-solid fa-chevron-right"></i> Cartillas</a></li>
+          <li><a href="galeria.html"><i class="fa-solid fa-chevron-right"></i> Galería</a></li>
+          <li><a href="actividades.html"><i class="fa-solid fa-chevron-right"></i> Actividades</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Contacto</h5>
+        <p><i class="fa-solid fa-school"></i> Institución Educativa</p>
+        <p><i class="fa-solid fa-envelope"></i> contacto@movilidadsegura.edu</p>
+        <p><i class="fa-solid fa-location-dot"></i> Colombia</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <i class="fa-solid fa-traffic-light"></i>
+      &copy; 2025 Proyecto Movilidad Segura &nbsp;·&nbsp; Educación Vial Escolar
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto – Movilidad Segura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/styles.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar__inner">
+    <a class="navbar__logo" href="../index.html">
+      <div class="semaforo">
+        <span class="semaforo__dot semaforo__dot--rojo"></span>
+        <span class="semaforo__dot semaforo__dot--amarillo"></span>
+        <span class="semaforo__dot semaforo__dot--verde"></span>
+      </div>
+      Movilidad Segura
+    </a>
+    <nav class="navbar__menu">
+      <a class="navbar__link" href="../index.html">Inicio</a>
+      <a class="navbar__link" href="sobre-proyecto.html">El Proyecto</a>
+      <a class="navbar__link" href="cartillas.html">Cartillas</a>
+      <a class="navbar__link" href="galeria.html">Galería</a>
+      <a class="navbar__link" href="actividades.html">Actividades</a>
+      <a class="navbar__link navbar__link--cta active" href="contacto.html">Contacto</a>
+    </nav>
+    <button class="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="page-hero__shapes">
+    <div class="page-hero__shape page-hero__shape--1"></div>
+    <div class="page-hero__shape page-hero__shape--2"></div>
+  </div>
+  <div class="container page-hero__content">
+    <nav class="breadcrumb">
+      <a href="../index.html">Inicio</a><span>›</span>
+      <span>Contacto</span>
+    </nav>
+    <span class="badge badge--white">
+      <i class="fa-solid fa-envelope"></i> Comunicación
+    </span>
+    <h1>Contacto</h1>
+    <p>Si deseas obtener más información sobre el proyecto Movilidad Segura, tienes preguntas o quieres colaborar, puedes comunicarte con nosotros.</p>
+  </div>
+</header>
+
+<!-- CONTACTO -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- INFO -->
+      <div class="fade-in">
+        <span class="badge badge--azul">
+          <i class="fa-solid fa-circle-info"></i> Información
+        </span>
+        <h2 style="color:var(--azul-oscuro);margin:14px 0 16px;">Estamos para ayudarte</h2>
+        <p style="color:var(--texto-suave);margin-bottom:32px;">El proyecto Movilidad Segura busca promover una cultura vial responsable en los estudiantes mediante actividades educativas y material pedagógico de calidad.</p>
+
+        <div class="contact-info-item">
+          <div class="contact-info-item__icon">
+            <i class="fa-solid fa-school"></i>
+          </div>
+          <div>
+            <h4>Institución Educativa</h4>
+            <p>Proyecto pedagógico escolar enfocado en la seguridad vial desde los primeros grados.</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-item__icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div>
+            <h4>Correo Electrónico</h4>
+            <p>contacto@movilidadsegura.edu</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-item__icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>
+            <h4>Ubicación</h4>
+            <p>Colombia</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-item__icon">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <div>
+            <h4>Horario de Atención</h4>
+            <p>Lunes a Viernes &nbsp;·&nbsp; 7:00 am – 4:00 pm</p>
+          </div>
+        </div>
+
+        <!-- Aviso -->
+        <div class="aviso aviso--verde" style="margin-top:8px;">
+          <div class="aviso__icon"><i class="fa-solid fa-check-circle"></i></div>
+          <div class="aviso__text">
+            <h4>Respondemos rápido</h4>
+            <p>Intentamos responder todos los mensajes en menos de 48 horas hábiles.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORMULARIO
+      <div class="fade-in">
+        <div class="card" style="padding:40px;">
+          <h2 style="color:var(--azul-oscuro);margin-bottom:8px;">
+            <i class="fa-solid fa-paper-plane" style="color:var(--azul);"></i>
+            &nbsp;Enviar mensaje
+          </h2>
+          <p style="color:var(--texto-suave);margin-bottom:28px;">Completa el formulario y nos pondremos en contacto contigo.</p>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-user" style="color:var(--azul);margin-right:6px;"></i> Nombre completo</label>
+            <input type="text" placeholder="Tu nombre completo"/>
+          </div>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-envelope" style="color:var(--azul);margin-right:6px;"></i> Correo electrónico</label>
+            <input type="email" placeholder="tu@correo.com"/>
+          </div>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-tag" style="color:var(--azul);margin-right:6px;"></i> Asunto</label>
+            <input type="text" placeholder="¿Sobre qué nos escribes?"/>
+          </div>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-comment-dots" style="color:var(--azul);margin-right:6px;"></i> Mensaje</label>
+            <textarea placeholder="Escribe tu mensaje aquí..."></textarea>
+          </div>
+
+          <button class="btn btn--azul" style="width:100%;justify-content:center;">
+            <i class="fa-solid fa-paper-plane"></i>
+            Enviar mensaje
+          </button>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="navbar__logo" href="../index.html" style="margin-bottom:16px;display:inline-flex;">
+          <div class="semaforo">
+            <span class="semaforo__dot semaforo__dot--rojo"></span>
+            <span class="semaforo__dot semaforo__dot--amarillo"></span>
+            <span class="semaforo__dot semaforo__dot--verde"></span>
+          </div>
+          Movilidad Segura
+        </a>
+        <p>Proyecto pedagógico de educación vial para la comunidad escolar.</p>
+      </div>
+      <div class="footer__col">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="../index.html"><i class="fa-solid fa-chevron-right"></i> Inicio</a></li>
+          <li><a href="sobre-proyecto.html"><i class="fa-solid fa-chevron-right"></i> El Proyecto</a></li>
+          <li><a href="cartillas.html"><i class="fa-solid fa-chevron-right"></i> Cartillas</a></li>
+          <li><a href="galeria.html"><i class="fa-solid fa-chevron-right"></i> Galería</a></li>
+          <li><a href="actividades.html"><i class="fa-solid fa-chevron-right"></i> Actividades</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Contacto</h5>
+        <p><i class="fa-solid fa-school"></i> Institución Educativa</p>
+        <p><i class="fa-solid fa-envelope"></i> contacto@movilidadsegura.edu</p>
+        <p><i class="fa-solid fa-location-dot"></i> Colombia</p>
+        <p><i class="fa-solid fa-clock"></i> Lun – Vie · 7am – 4pm</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <i class="fa-solid fa-traffic-light"></i>
+      &copy; 2025 Proyecto Movilidad Segura &nbsp;·&nbsp; Educación Vial Escolar
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
