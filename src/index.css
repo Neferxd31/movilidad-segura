@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply font-sans text-slate-700 bg-slate-50; }
+  h1, h2, h3, h4, h5, h6 { @apply font-heading; }
+}
+
+@layer components {
+  /* Layout */
+  .container { @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8; }
+  .section    { @apply py-20; }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-brand-blue text-white px-6 py-3 rounded-xl font-semibold
+           hover:bg-brand-dark transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border-2 border-white/60 text-white px-6 py-3 rounded-xl font-semibold
+           hover:bg-white hover:text-brand-dark transition-all duration-200;
+  }
+  .btn-green {
+    @apply inline-flex items-center gap-2 bg-brand-green text-white px-5 py-2.5 rounded-xl font-semibold
+           hover:bg-green-700 transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5;
+  }
+  .btn-blue {
+    @apply inline-flex items-center gap-2 bg-brand-blue text-white px-5 py-2.5 rounded-xl font-semibold
+           hover:bg-brand-dark transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5;
+  }
+  .btn-yellow {
+    @apply inline-flex items-center gap-2 bg-brand-yellow text-brand-dark px-5 py-2.5 rounded-xl font-bold
+           hover:bg-yellow-400 transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5;
+  }
+
+  /* Badges */
+  .badge        { @apply inline-flex items-center gap-1.5 text-sm font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wide; }
+  .badge-blue   { @apply badge bg-brand-blue-light text-brand-blue; }
+  .badge-green  { @apply badge bg-brand-green-light text-brand-green; }
+  .badge-yellow { @apply badge bg-brand-yellow-light text-amber-700; }
+  .badge-red    { @apply badge bg-brand-red-light text-brand-red; }
+  .badge-white  { @apply badge bg-white/20 text-white; }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-2xl p-6 shadow-sm border border-slate-100
+           hover:shadow-md transition-all duration-200 hover:-translate-y-1;
+  }
+
+  /* Icon Boxes */
+  .icon-box        { @apply w-16 h-16 rounded-xl flex items-center justify-center text-3xl mb-4 flex-shrink-0; }
+  .icon-box-blue   { @apply icon-box bg-brand-blue-light text-brand-blue; }
+  .icon-box-green  { @apply icon-box bg-brand-green-light text-brand-green; }
+  .icon-box-yellow { @apply icon-box bg-brand-yellow-light text-amber-600; }
+  .icon-box-red    { @apply icon-box bg-brand-red-light text-brand-red; }
+
+  /* Alerts */
+  .aviso        { @apply flex items-start gap-4 p-4 rounded-xl border; }
+  .aviso-blue   { @apply aviso bg-brand-blue-light border-blue-200; }
+  .aviso-green  { @apply aviso bg-brand-green-light border-green-200; }
+  .aviso-yellow { @apply aviso bg-brand-yellow-light border-amber-200; }
+  .aviso-red    { @apply aviso bg-brand-red-light border-red-200; }
+
+  /* Timeline */
+  .timeline-line { @apply relative pl-8 pb-8 border-l-2 border-slate-200 last:border-transparent last:pb-0; }
+  .timeline-dot  { @apply absolute -left-2.5 top-1 w-5 h-5 rounded-full border-2 border-white shadow-sm; }
+}
