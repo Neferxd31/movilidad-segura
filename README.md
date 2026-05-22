@@ -4,6 +4,22 @@ Sitio web educativo de educación vial escolar (Colombia), construido con **Reac
 
 ---
 
+## 🚀 Inicio rápido (lo único que necesitas instalar es Node.js)
+
+1. **Instala Node.js** (una sola vez): descarga la versión **LTS** desde [nodejs.org](https://nodejs.org) e instálala con las opciones por defecto. Incluye `npm` automáticamente.
+2. **Ejecuta el proyecto:**
+   - **Windows:** haz doble clic en el archivo **`iniciar.bat`**. La primera vez instala las dependencias solo y luego abre el sitio en el navegador.
+   - **Cualquier sistema (manual):** abre una terminal en la carpeta del proyecto y ejecuta:
+     ```bash
+     npm install   # solo la primera vez
+     npm run dev    # inicia el sitio en http://localhost:5173
+     ```
+3. El sitio queda disponible en **http://localhost:5173**. Para detenerlo, cierra la ventana o presiona `Ctrl+C`.
+
+> No necesitas instalar Vite, React ni nada más por separado: `npm install` descarga todo dentro de la carpeta `node_modules`.
+
+---
+
 ## Tecnologías
 
 | Herramienta | Versión |
@@ -50,10 +66,10 @@ movilidad-segura/
 │
 └── assets/
     └── pdf/                    ← PDFs de las cartillas (se sirven en /pdf/)
-        ├── cartilla-preescolar.pdf
-        ├── cartilla-primero.pdf
-        ├── cartilla-segundo-tercero.pdf
-        └── cartilla-cuarto-quinto.pdf
+        ├── 1 CARTILLA PREESCOLAR MOVILIDAD SEGURA (1).pdf
+        ├── CARTILLA GRADO PRIMERO MOVILIDAD SEGURA (1).pdf
+        ├── CARTILLA 2 y 3  MOVILIDAD SEGURA (1).pdf
+        └── 1 CARTILLA 4 y 5  MOVILIDAD SEGURA (1).pdf
 ```
 
 ---
@@ -94,11 +110,11 @@ Los colores están configurados en `tailwind.config.js` como `brand-blue`, `bran
 ## Cómo agregar las cartillas PDF
 
 1. Coloca los archivos en `assets/pdf/`
-2. Los nombres deben ser exactamente:
-   - `cartilla-preescolar.pdf`
-   - `cartilla-primero.pdf`
-   - `cartilla-segundo-tercero.pdf`
-   - `cartilla-cuarto-quinto.pdf`
+2. Los nombres deben coincidir exactamente con las rutas definidas en `src/pages/Cartillas.jsx`:
+   - `1 CARTILLA PREESCOLAR MOVILIDAD SEGURA (1).pdf`
+   - `CARTILLA GRADO PRIMERO MOVILIDAD SEGURA (1).pdf`
+   - `CARTILLA 2 y 3  MOVILIDAD SEGURA (1).pdf`
+   - `1 CARTILLA 4 y 5  MOVILIDAD SEGURA (1).pdf`
 3. Vite los sirve automáticamente en `/pdf/` gracias a la configuración `publicDir: 'assets'` en `vite.config.js`
 
 ---
