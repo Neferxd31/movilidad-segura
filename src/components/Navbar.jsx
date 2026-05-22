@@ -10,11 +10,18 @@ const links = [
 ]
 
 export default function Navbar() {
-  const [open, setOpen]       = useState(false)
+  const [open, setOpen]         = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [progress, setProgress] = useState(0)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24)
+    const onScroll = () => {
+      setScrolled(window.scrollY > 24)
+      // Porcentaje de la página recorrido hacia abajo
+      const max = document.documentElement.scrollHeight - window.innerHeight
+      setProgress(max > 0 ? (window.scrollY / max) * 100 : 0)
+    }
+    onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
@@ -23,6 +30,11 @@ export default function Navbar() {
     <nav className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
       scrolled ? 'bg-brand-dark/95 backdrop-blur-md shadow-xl' : 'bg-brand-dark'
     }`}>
+      {/* Barra de progreso de lectura */}
+      <div
+        className="absolute bottom-0 left-0 h-0.5 bg-brand-yellow transition-[width] duration-150 ease-out"
+        style={{ width: `${progress}%` }}
+      />
       <div className="container">
         <div className="flex items-center justify-between h-16">
 
@@ -30,9 +42,10 @@ export default function Navbar() {
           <Link
             to="/"
             onClick={() => setOpen(false)}
-            className="flex items-center gap-3 text-white font-heading font-semibold text-lg tracking-wide select-none"
+            className="group flex items-center gap-3 text-white font-heading font-semibold text-lg tracking-wide select-none"
           >
-            <div className="flex flex-col gap-[3px] bg-white/10 rounded-lg px-2 py-1.5 border border-white/10">
+            <div className="flex flex-col gap-[3px] bg-white/10 rounded-lg px-2 py-1.5 border border-white/10
+                            transition-all duration-300 group-hover:bg-white/20 group-hover:scale-105">
               <span className="w-3 h-3 rounded-full bg-red-500   shadow-sm block" />
               <span className="w-3 h-3 rounded-full bg-yellow-400 shadow-sm block" />
               <span className="w-3 h-3 rounded-full bg-green-500  shadow-sm block" />
@@ -48,14 +61,22 @@ export default function Navbar() {
                 to={l.to}
                 end={l.end}
                 className={({ isActive }) =>
-                  `px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-150 ${
+                  `relative px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-150 ${
                     isActive
-                      ? 'bg-brand-blue text-white shadow-sm'
+                      ? 'text-white'
                       : 'text-white/75 hover:text-white hover:bg-white/10'
                   }`
                 }
               >
-                {l.label}
+                {({ isActive }) => (
+                  <>
+                    {l.label}
+                    <span className={`absolute left-3 right-3 -bottom-0.5 h-0.5 rounded-full bg-brand-yellow
+                                      origin-center transition-transform duration-300 ${
+                                        isActive ? 'scale-x-100' : 'scale-x-0'
+                                      }`} />
+                  </>
+                )}
               </NavLink>
             ))}
             <Link

@@ -47,9 +47,11 @@ export default function Footer() {
                 <li key={l.to}>
                   <Link
                     to={l.to}
-                    className="flex items-center gap-2 text-white/60 hover:text-white text-sm transition-colors"
+                    className="group flex items-center gap-2 text-white/60 hover:text-white text-sm
+                               transition-all duration-200 hover:translate-x-1"
                   >
-                    <i className="fa-solid fa-chevron-right text-[10px] text-brand-yellow" />
+                    <i className="fa-solid fa-chevron-right text-[10px] text-brand-yellow
+                                  transition-transform duration-200 group-hover:translate-x-0.5" />
                     {l.label}
                   </Link>
                 </li>

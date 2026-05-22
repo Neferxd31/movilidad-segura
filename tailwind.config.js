@@ -34,11 +34,30 @@ export default {
           '0%, 100%': { opacity: '1' },
           '50%':      { opacity: '0.5' },
         },
+        scaleIn: {
+          '0%':   { opacity: '0', transform: 'scale(0.94)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        shimmer: {
+          '0%':   { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        dash: {
+          '0%':   { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-64px)' },
+        },
       },
       animation: {
         'fade-up':  'fadeUp 0.6s ease-out both',
         'float':    'float 5s ease-in-out infinite',
         'pulse2':   'pulse2 2s ease-in-out infinite',
+        'scale-in': 'scaleIn 0.5s cubic-bezier(0.22,1,0.36,1) both',
+        'shimmer':  'shimmer 2.4s linear infinite',
+        'dash':     'dash 2.5s linear infinite',
+      },
+      boxShadow: {
+        'brand':    '0 10px 30px -8px rgba(30,115,190,0.35)',
+        'brand-lg': '0 20px 45px -12px rgba(15,63,111,0.45)',
       },
     },
   },

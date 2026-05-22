@@ -4,8 +4,32 @@
 
 @layer base {
   html { scroll-behavior: smooth; }
-  body { @apply font-sans text-slate-700 bg-slate-50; }
+  body { @apply font-sans text-slate-700 bg-slate-50 antialiased; }
   h1, h2, h3, h4, h5, h6 { @apply font-heading; }
+
+  /* Scrollbar personalizado */
+  ::-webkit-scrollbar       { width: 11px; }
+  ::-webkit-scrollbar-track { @apply bg-slate-100; }
+  ::-webkit-scrollbar-thumb { @apply bg-slate-300 rounded-full border-2 border-solid border-slate-100; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-brand-blue; }
+
+  /* Selección de texto con color de marca */
+  ::selection { @apply bg-brand-blue text-white; }
+
+  /* Anillo de foco accesible y consistente */
+  a:focus-visible, button:focus-visible {
+    @apply outline-none ring-2 ring-brand-yellow ring-offset-2 ring-offset-white rounded-lg;
+  }
+
+  /* Respeta la preferencia de movimiento reducido */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 @layer components {
@@ -16,23 +40,28 @@
   /* Buttons */
   .btn-primary {
     @apply inline-flex items-center gap-2 bg-brand-blue text-white px-6 py-3 rounded-xl font-semibold
-           hover:bg-brand-dark transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5;
+           hover:bg-brand-dark transition-all duration-200 shadow-md hover:shadow-brand
+           hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98];
   }
   .btn-outline {
     @apply inline-flex items-center gap-2 border-2 border-white/60 text-white px-6 py-3 rounded-xl font-semibold
-           hover:bg-white hover:text-brand-dark transition-all duration-200;
+           hover:bg-white hover:text-brand-dark hover:border-white transition-all duration-200
+           hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98];
   }
   .btn-green {
     @apply inline-flex items-center gap-2 bg-brand-green text-white px-5 py-2.5 rounded-xl font-semibold
-           hover:bg-green-700 transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5;
+           hover:bg-green-700 transition-all duration-200 shadow-sm hover:shadow-md
+           hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98];
   }
   .btn-blue {
     @apply inline-flex items-center gap-2 bg-brand-blue text-white px-5 py-2.5 rounded-xl font-semibold
-           hover:bg-brand-dark transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5;
+           hover:bg-brand-dark transition-all duration-200 shadow-sm hover:shadow-brand
+           hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98];
   }
   .btn-yellow {
     @apply inline-flex items-center gap-2 bg-brand-yellow text-brand-dark px-5 py-2.5 rounded-xl font-bold
-           hover:bg-yellow-400 transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5;
+           hover:bg-yellow-400 transition-all duration-200 shadow-sm hover:shadow-md
+           hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98];
   }
 
   /* Badges */
@@ -46,7 +75,17 @@
   /* Cards */
   .card {
     @apply bg-white rounded-2xl p-6 shadow-sm border border-slate-100
-           hover:shadow-md transition-all duration-200 hover:-translate-y-1;
+           transition-all duration-300 hover:-translate-y-1.5
+           hover:shadow-brand-lg hover:border-brand-blue/20;
+  }
+
+  /* Icono que reacciona al hover de la tarjeta contenedora */
+  .card .icon-box { @apply transition-transform duration-300; }
+  .card:hover .icon-box { @apply scale-110 -rotate-3; }
+
+  /* Texto con degradado de marca */
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-blue to-brand-dark bg-clip-text text-transparent;
   }
 
   /* Icon Boxes */
