@@ -80,7 +80,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container py-4 flex items-center justify-center gap-2 text-white/35 text-xs">
           <i className="fa-solid fa-traffic-light text-brand-yellow" />
-          <span>© 2025 Proyecto Movilidad Segura &nbsp;·&nbsp; Institución Educativa Colombia</span>
+          <span>© 2026 Proyecto Movilidad Segura &nbsp;·&nbsp; Institución Educativa Colombia</span>
         </div>
       </div>
     </footer>
