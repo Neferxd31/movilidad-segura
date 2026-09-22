@@ -42,15 +42,13 @@ export default function Navbar() {
           <Link
             to="/"
             onClick={() => setOpen(false)}
-            className="group flex items-center gap-3 text-white font-heading font-semibold text-lg tracking-wide select-none"
+            className="group flex items-center select-none"
           >
-            <div className="flex flex-col gap-[3px] bg-white/10 rounded-lg px-2 py-1.5 border border-white/10
-                            transition-all duration-300 group-hover:bg-white/20 group-hover:scale-105">
-              <span className="w-3 h-3 rounded-full bg-red-500   shadow-sm block" />
-              <span className="w-3 h-3 rounded-full bg-yellow-400 shadow-sm block" />
-              <span className="w-3 h-3 rounded-full bg-green-500  shadow-sm block" />
-            </div>
-            <span>Movilidad Segura</span>
+            <img
+              src="/img/logo.png"
+              alt="Movilidad Segura"
+              className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {/* ── Desktop links ── */}
