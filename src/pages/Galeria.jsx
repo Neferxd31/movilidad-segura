@@ -36,6 +36,7 @@ const albums = [
       {
         src: '/img/galeria/charlas/charlas-video.mp4',
         thumb: '/img/galeria/charlas/thumbs/charlas-video.jpg',
+        poster: '/img/galeria/posters/charlas-video.jpg',
         video: true,
       },
     ],
@@ -49,12 +50,41 @@ const albums = [
     items: photos('taller-senales', 4),
   },
   {
+    slug: 'simulacro-peatonal',
+    label: 'Simulacro peatonal',
+    desc: 'Estudiantes guiando el cruce seguro en las calles del colegio',
+    icon: 'fa-person-walking',
+    gradient: 'from-brand-green to-green-400',
+    items: photos('simulacro-peatonal', 5),
+  },
+  {
     slug: 'concurso-dibujo',
     label: 'Concurso de dibujo',
     desc: 'Mi Ciudad Segura — los estudiantes dibujando sus propuestas',
     icon: 'fa-palette',
     gradient: 'from-pink-500 to-rose-400',
     items: photos('concurso-dibujo', 10),
+  },
+  {
+    slug: 'entrevistas',
+    label: 'Entrevistas',
+    desc: 'Testimonios de la comunidad educativa sobre el proyecto',
+    icon: 'fa-microphone',
+    gradient: 'from-purple-600 to-purple-400',
+    items: [
+      {
+        src: '/img/galeria/entrevistas/entrevistas-01.mp4',
+        thumb: '/img/galeria/entrevistas/thumbs/entrevistas-01.jpg',
+        poster: '/img/galeria/posters/entrevistas-01.jpg',
+        video: true,
+      },
+      {
+        src: '/img/galeria/entrevistas/entrevistas-02.mp4',
+        thumb: '/img/galeria/entrevistas/thumbs/entrevistas-02.jpg',
+        poster: '/img/galeria/posters/entrevistas-02.jpg',
+        video: true,
+      },
+    ],
   },
 ]
 
@@ -121,6 +151,7 @@ function Lightbox({ album, index, onClose, onMove }) {
           <video
             key={item.src}
             src={item.src}
+            poster={item.poster}
             controls
             className="max-h-full max-w-full rounded-xl shadow-2xl"
             onClick={e => e.stopPropagation()}
