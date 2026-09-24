@@ -57,15 +57,6 @@ const introCards = [
   },
   {
     num:   '02',
-    icon:  'fa-children',
-    color: 'icon-box-green',
-    border:'border-t-brand-green',
-    title: 'Formación desde pequeños',
-    desc:  'El proyecto se desarrolla desde los primeros grados escolares, fortaleciendo la cultura vial desde la infancia.',
-    items: ['Preescolar y primaria', 'Juego y simulación', 'Hábitos tempranos'],
-  },
-  {
-    num:   '03',
     icon:  'fa-road',
     color: 'icon-box-yellow',
     border:'border-t-brand-yellow',
@@ -262,8 +253,8 @@ export default function Home() {
             </FadeIn>
           </div>
 
-          {/* 3 intro cards */}
-          <div className="grid md:grid-cols-3 gap-6">
+          {/* 2 intro cards */}
+          <div className="grid md:grid-cols-2 gap-6">
             {introCards.map((card, i) => (
               <FadeIn key={i} delay={i * 80}>
                 <div className="card border-t-4" style={{
