@@ -62,27 +62,9 @@ const timelineLeft = [
     desc:  'Los estudiantes practicaron el cruce correcto de la calle en un circuito montado en el patio del colegio, con semáforo y señales reales.',
     dot:   'bg-brand-yellow',
   },
-  {
-    badge: 'badge-red', badgeIcon: 'fa-star', badgeLabel: 'Evento',
-    title: 'Jornada de Sensibilización Vial',
-    desc:  'Campaña especial con participación de toda la institución. Actividades artísticas, exposición de trabajos y mensaje colectivo sobre seguridad vial.',
-    dot:   'bg-brand-red',
-  },
 ]
 
 const timelineRight = [
-  {
-    badge: 'badge-green', badgeIcon: 'fa-bus-school', badgeLabel: 'Taller',
-    title: 'Charla de Comportamiento en Bus Escolar – Grado 3°',
-    desc:  'Normas de seguridad al abordar y descender del bus escolar. Importancia de permanecer sentado y no distraer al conductor en ningún momento.',
-    dot:   'bg-brand-green',
-  },
-  {
-    badge: 'badge-blue', badgeIcon: 'fa-users', badgeLabel: 'Charla',
-    title: 'Educación Vial para Padres de Familia',
-    desc:  'Sesión de orientación para padres y cuidadores. Recomendaciones para reforzar en casa los hábitos de movilidad segura aprendidos en el colegio.',
-    dot:   'bg-brand-blue',
-  },
   {
     badge: 'badge-yellow', badgeIcon: 'fa-palette', badgeLabel: 'Actividad',
     title: 'Concurso de Dibujo: "Mi Ciudad Segura"',
@@ -90,10 +72,10 @@ const timelineRight = [
     dot:   'bg-brand-yellow',
   },
   {
-    badge: 'badge-green', badgeIcon: 'fa-fire-extinguisher', badgeLabel: 'Taller',
-    title: 'Taller de Prevención de Accidentes – Grados 4° y 5°',
-    desc:  'Análisis de situaciones de riesgo en las vías, primeros auxilios básicos y la importancia de reportar accidentes. Invitados del cuerpo de bomberos.',
-    dot:   'bg-brand-green',
+    badge: 'badge-blue', badgeIcon: 'fa-microphone-lines', badgeLabel: 'Entrevista',
+    title: 'Entrevistas a la Comunidad Educativa',
+    desc:  'Registro en video de los testimonios de estudiantes y docentes sobre el proyecto y lo aprendido durante las actividades. Las entrevistas están publicadas en la galería.',
+    dot:   'bg-brand-blue',
   },
 ]
 
