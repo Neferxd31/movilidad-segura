@@ -52,13 +52,13 @@ const timelineLeft = [
   },
   {
     badge: 'badge-green', badgeIcon: 'fa-hands-holding-child', badgeLabel: 'Taller',
-    title: 'Taller de Señales de Tránsito – Grados 1° y 2°',
+    title: 'Taller de Señales de Tránsito – Grado 6°',
     desc:  'Actividad práctica donde los estudiantes construyeron y colorearon señales de tránsito, identificando señales preventivas, reglamentarias e informativas.',
     dot:   'bg-brand-green',
   },
   {
     badge: 'badge-yellow', badgeIcon: 'fa-person-walking', badgeLabel: 'Actividad',
-    title: 'Simulacro de Cruce Peatonal – Preescolar',
+    title: 'Simulacro de Cruce Peatonal – Colegio General Santander',
     desc:  'Los niños de preescolar practicaron el cruce correcto de la calle en un circuito montado en el patio del colegio, con semáforo y señales reales.',
     dot:   'bg-brand-yellow',
   },
