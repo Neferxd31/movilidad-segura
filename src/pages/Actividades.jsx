@@ -97,30 +97,6 @@ const timelineRight = [
   },
 ]
 
-const upcoming = [
-  {
-    cls:  'aviso-blue',
-    icon: 'fa-bicycle',
-    iconColor: 'text-brand-blue',
-    title: 'Charla: Uso seguro de la bicicleta',
-    desc:  'Sesión dirigida a estudiantes de 3°, 4° y 5° grado sobre normas para ciclistas y el uso obligatorio del casco protector en las vías.',
-  },
-  {
-    cls:  'aviso-green',
-    icon: 'fa-route',
-    iconColor: 'text-brand-green',
-    title: 'Actividad: Circuito de Movilidad en el Colegio',
-    desc:  'Recreación de vías urbanas en las instalaciones del colegio donde los estudiantes practicarán como peatones y ciclistas en situaciones reales.',
-  },
-  {
-    cls:  'aviso-yellow',
-    icon: 'fa-flag-checkered',
-    iconColor: 'text-amber-600',
-    title: 'Evento: Semana de la Movilidad Segura',
-    desc:  'Una semana completa de actividades, concursos, exposiciones y charlas especiales en toda la institución educativa con participación familiar.',
-  },
-]
-
 /* Timeline item component */
 function TimelineItem({ item }) {
   return (
@@ -218,42 +194,6 @@ export default function Actividades() {
         </div>
       </section>
 
-      {/* ── UPCOMING ───────────────────────────────────── */}
-      <section className="section bg-white">
-        <div className="container">
-          <FadeIn>
-            <div className="mb-10">
-              <span className="badge-yellow mb-3 inline-flex">
-                <i className="fa-solid fa-calendar-plus" /> Próximamente
-              </span>
-              <h2 className="text-4xl font-heading font-bold text-brand-dark mb-4">
-                Actividades Programadas
-              </h2>
-              <p className="text-slate-500 max-w-2xl leading-relaxed">
-                Estas son las próximas actividades que se desarrollarán en el marco del proyecto
-                durante el año escolar.
-              </p>
-            </div>
-          </FadeIn>
-
-          <div className="flex flex-col gap-4">
-            {upcoming.map((u, i) => (
-              <FadeIn key={i} delay={i * 80}>
-                <div className={u.cls}>
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0
-                                  bg-white/70 shadow-sm">
-                    <i className={`fa-solid ${u.icon} text-lg ${u.iconColor}`} />
-                  </div>
-                  <div>
-                    <h4 className="font-heading font-semibold text-brand-dark mb-1">{u.title}</h4>
-                    <p className="text-slate-600 text-base leading-relaxed">{u.desc}</p>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   )
 }
