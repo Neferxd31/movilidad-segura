@@ -19,9 +19,9 @@ function FadeIn({ children, delay = 0, className = '' }) {
 
 /* ─── Stats data ───────────────────────────────────────── */
 const stats = [
-  { number: '5+',   label: 'Grados Escolares',      icon: 'fa-school'         },
+  { number: '6°',   label: 'Grado Escolar',          icon: 'fa-school'         },
   { number: '4',    label: 'Cartillas Educativas',   icon: 'fa-book-open'      },
-  { number: '8+',   label: 'Actividades Realizadas', icon: 'fa-calendar-check' },
+  { number: '5',    label: 'Actividades Realizadas', icon: 'fa-calendar-check' },
   { number: '100%', label: 'Compromiso Educativo',   icon: 'fa-heart'          },
 ]
 
