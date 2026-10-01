@@ -19,8 +19,8 @@ function FadeIn({ children, delay = 0, className = '' }) {
 const timelineLeft = [
   {
     badge: 'badge-blue', badgeIcon: 'fa-microphone', badgeLabel: 'Charla',
-    title: 'Charla de Inicio: Importancia de la Movilidad Segura',
-    desc:  'Sesión introductoria para todos los grados de primaria. Presentación del proyecto y sus objetivos a la comunidad escolar. Participaron docentes, estudiantes y directivos.',
+    title: 'Charla de Inicio: Importancia de la Movilidad Segura – Grado 6°',
+    desc:  'Sesión introductoria con los estudiantes de grado 6°. Presentación del proyecto y sus objetivos a la comunidad escolar. Participaron docentes, estudiantes y directivos.',
     dot:   'bg-brand-blue',
   },
   {
@@ -32,7 +32,7 @@ const timelineLeft = [
   {
     badge: 'badge-yellow', badgeIcon: 'fa-person-walking', badgeLabel: 'Actividad',
     title: 'Simulacro de Cruce Peatonal – Colegio General Santander',
-    desc:  'Los estudiantes practicaron el cruce correcto de la calle en un circuito montado en el patio del colegio, con semáforo y señales reales.',
+    desc:  'Caminata educativa por las calles cercanas al colegio, donde los estudiantes guiaron el cruce de peatones con señales de PARE y SIGA.',
     dot:   'bg-brand-yellow',
   },
 ]
@@ -49,6 +49,12 @@ const timelineRight = [
     title: 'Entrevistas a la Comunidad Educativa',
     desc:  'Registro en video de los testimonios de estudiantes y docentes sobre el proyecto y lo aprendido durante las actividades. Las entrevistas están publicadas en la galería.',
     dot:   'bg-brand-blue',
+  },
+  {
+    badge: 'badge-red', badgeIcon: 'fa-gamepad', badgeLabel: 'Actividad lúdica',
+    title: 'Juego Interactivo de Movilidad Vial',
+    desc:  'Dinámica en el aula con un juego interactivo proyectado en el televisor, donde los estudiantes pusieron a prueba lo aprendido sobre seguridad vial.',
+    dot:   'bg-brand-red',
   },
 ]
 
