@@ -137,7 +137,7 @@ export default function SobreProyecto() {
                 {[
                   { n: '6°', label: 'Grado',     color: 'text-brand-blue'  },
                   { n: '4',  label: 'Cartillas', color: 'text-brand-green' },
-                  { n: '7',  label: 'Actividades',color: 'text-brand-red'  },
+                  { n: '6',  label: 'Actividades',color: 'text-brand-red'  },
                 ].map((s, i) => (
                   <div key={i} className="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center">
                     <div className={`text-2xl font-heading font-bold ${s.color}`}>{s.n}</div>
