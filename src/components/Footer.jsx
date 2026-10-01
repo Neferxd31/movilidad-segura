@@ -30,6 +30,16 @@ export default function Footer() {
               Proyecto educativo orientado a fortalecer la cultura vial y la seguridad
               en la movilidad de los estudiantes desde los primeros grados escolares.
             </p>
+
+            {/* Logos institucionales */}
+            <div className="flex items-center gap-6 mt-6">
+              <img
+                src="/img/logo-colegio.png"
+                alt="Institución Educativa Colegio General Santander"
+                className="h-16 w-auto"
+              />
+              <img src="/img/logo-sena.png" alt="SENA" className="h-12 w-auto" />
+            </div>
           </div>
 
           {/* Nav */}
