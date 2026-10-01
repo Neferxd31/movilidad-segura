@@ -221,10 +221,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-2">
                 {[
                   { label: 'Educación vial',          color: 'badge-blue'   },
-                  { label: 'Desde los primeros grados',color: 'badge-green'  },
                   { label: 'Cultura de prevención',    color: 'badge-yellow' },
-                  { label: 'Aplicado en aula',         color: 'badge-blue'   },
-                  { label: 'Toda la comunidad',        color: 'badge-green'  },
                 ].map((pill, i) => (
                   <span key={i} className={pill.color}>{pill.label}</span>
                 ))}

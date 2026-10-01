@@ -43,12 +43,6 @@ const objectives = [
     desc:  'Reducir los riesgos de accidentes mediante el conocimiento y aplicación de normas de tránsito.',
   },
   {
-    icon:  'fa-house',
-    color: 'icon-box-blue',
-    title: 'Participación Familiar',
-    desc:  'Involucrar a padres y cuidadores en la formación de hábitos de movilidad segura fuera del colegio.',
-  },
-  {
     icon:  'fa-book',
     color: 'icon-box-green',
     title: 'Material Pedagógico',
