@@ -284,8 +284,8 @@ export default function Home() {
                 Actividades del Proyecto
               </h2>
               <p className="text-slate-500 max-w-2xl leading-relaxed">
-                Durante el año escolar se desarrollan talleres, charlas, simulaciones y campañas
-                educativas que fortalecen el aprendizaje sobre seguridad vial.
+                Durante el año escolar se desarrollan talleres, charlas, simulaciones y entrevistas
+                que fortalecen el aprendizaje sobre seguridad vial.
               </p>
             </div>
           </FadeIn>
