@@ -16,33 +16,6 @@ function FadeIn({ children, delay = 0, className = '' }) {
   )
 }
 
-const activityTypes = [
-  {
-    icon:  'fa-microphone-lines',
-    color: 'icon-box-blue',
-    title: 'Charlas Informativas',
-    desc:  'Conferencias con expertos en movilidad y seguridad vial para toda la comunidad escolar.',
-  },
-  {
-    icon:  'fa-hands-holding-child',
-    color: 'icon-box-green',
-    title: 'Talleres Prácticos',
-    desc:  'Actividades donde los estudiantes practican situaciones reales de forma segura y controlada.',
-  },
-  {
-    icon:  'fa-puzzle-piece',
-    color: 'icon-box-yellow',
-    title: 'Actividades Lúdicas',
-    desc:  'Juegos y dinámicas diseñadas para que los más pequeños aprendan de forma divertida.',
-  },
-  {
-    icon:  'fa-trophy',
-    color: 'icon-box-red',
-    title: 'Eventos Especiales',
-    desc:  'Jornadas y campañas de sensibilización en fechas clave del calendario escolar y vial.',
-  },
-]
-
 const timelineLeft = [
   {
     badge: 'badge-blue', badgeIcon: 'fa-microphone', badgeLabel: 'Charla',
@@ -106,38 +79,6 @@ export default function Actividades() {
                      del Proyecto Movilidad Segura durante el año escolar."
         breadcrumb="Actividades"
       />
-
-      {/* ── ACTIVITY TYPES ─────────────────────────────── */}
-      <section className="section bg-white">
-        <div className="container">
-          <FadeIn>
-            <div className="text-center mb-12">
-              <span className="badge-blue mb-3 inline-flex">
-                <i className="fa-solid fa-list-check" /> ¿Cómo trabajamos?
-              </span>
-              <h2 className="text-4xl font-heading font-bold text-brand-dark mb-4">
-                Tipos de Actividades
-              </h2>
-              <p className="text-slate-500 max-w-2xl mx-auto leading-relaxed">
-                El proyecto combina diferentes estrategias pedagógicas para lograr un aprendizaje
-                significativo y duradero en los estudiantes.
-              </p>
-            </div>
-          </FadeIn>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {activityTypes.map((a, i) => (
-              <FadeIn key={i} delay={i * 70}>
-                <div className="card text-center">
-                  <div className={`${a.color} mx-auto`}><i className={`fa-solid ${a.icon}`} /></div>
-                  <h4 className="font-heading font-bold text-brand-dark text-lg mb-2">{a.title}</h4>
-                  <p className="text-slate-500 text-base leading-relaxed">{a.desc}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── TIMELINE ───────────────────────────────────── */}
       <section className="section bg-slate-50">

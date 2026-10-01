@@ -66,14 +66,6 @@ const introCards = [
   },
 ]
 
-/* ─── Cartillas preview ────────────────────────────────── */
-const cartillas = [
-  { icon: 'fa-child',         color: 'icon-box-blue',   label: 'Preescolar',   desc: 'Primer acercamiento al semáforo y normas básicas.' },
-  { icon: 'fa-pencil',        color: 'icon-box-green',  label: 'Grado 1°',     desc: 'Reconocimiento de señales y comportamiento peatonal.' },
-  { icon: 'fa-school-flag',   color: 'icon-box-yellow', label: 'Grados 2° y 3°', desc: 'Normas viales y responsabilidad en la movilidad.' },
-  { icon: 'fa-graduation-cap',color: 'icon-box-red',    label: 'Grados 4° y 5°', desc: 'Comprensión avanzada de la cultura vial.' },
-]
-
 /* ─── Activities preview ───────────────────────────────── */
 const actividadesPrev = [
   { icon: 'fa-chalkboard-user', color: 'icon-box-blue',   title: 'Charlas Educativas', desc: 'Sesiones pedagógicas sobre normas de tránsito y comportamientos seguros.' },
@@ -276,44 +268,6 @@ export default function Home() {
                 </div>
               </FadeIn>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CARTILLAS SECTION ──────────────────────────── */}
-      <section className="section bg-slate-50">
-        <div className="container">
-          <FadeIn>
-            <div className="text-center mb-12">
-              <span className="badge-green mb-3 inline-flex">
-                <i className="fa-solid fa-book" /> Material Educativo
-              </span>
-              <h2 className="text-4xl font-heading font-bold text-brand-dark mb-4">
-                Cartillas de Movilidad Segura
-              </h2>
-              <p className="text-slate-500 max-w-2xl mx-auto leading-relaxed">
-                Cartillas educativas diseñadas para cada grado escolar, con actividades didácticas
-                que enseñan normas de tránsito y hábitos de seguridad vial.
-              </p>
-            </div>
-          </FadeIn>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-            {cartillas.map((c, i) => (
-              <FadeIn key={i} delay={i * 60}>
-                <div className="card text-center">
-                  <div className={`${c.color} mx-auto`}><i className={`fa-solid ${c.icon}`} /></div>
-                  <h4 className="font-heading font-bold text-brand-dark text-lg mb-2">{c.label}</h4>
-                  <p className="text-slate-500 text-base leading-relaxed">{c.desc}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Link to="/cartillas" className="btn-blue">
-              <i className="fa-solid fa-arrow-right" /> Ver todas las cartillas
-            </Link>
           </div>
         </div>
       </section>
