@@ -50,6 +50,14 @@ const albums = [
     items: photos('taller-senales', 4),
   },
   {
+    slug: 'taller-practico',
+    label: 'Taller práctico',
+    desc: 'Dinámica en el aula donde los estudiantes exponen lo aprendido sobre seguridad vial',
+    icon: 'fa-people-group',
+    gradient: 'from-teal-600 to-teal-400',
+    items: photos('taller-practico', 8),
+  },
+  {
     slug: 'simulacro-peatonal',
     label: 'Simulacro peatonal',
     desc: 'Estudiantes guiando el cruce seguro en las calles del colegio',
