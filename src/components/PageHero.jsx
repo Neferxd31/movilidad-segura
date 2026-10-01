@@ -20,6 +20,14 @@ export default function PageHero({ badge, badgeIcon, title, description, breadcr
         </div>
       </div>
 
+      {/* Estudiantes: llenan el espacio libre del encabezado en pantallas anchas */}
+      <img
+        src="/img/estudiantes.webp"
+        alt=""
+        className="hidden lg:block absolute right-8 xl:right-20 bottom-0 h-64 xl:h-72 w-auto
+                   pointer-events-none select-none drop-shadow-2xl"
+      />
+
       <div className="container relative z-10">
         {/* Breadcrumb */}
         {breadcrumb && (
