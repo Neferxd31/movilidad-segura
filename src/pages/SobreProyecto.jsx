@@ -54,7 +54,7 @@ const programItems = [
   { icon: 'fa-school',           text: 'Implementado desde preescolar hasta quinto grado.' },
   { icon: 'fa-book-open',        text: 'Uso de cartillas pedagógicas adaptadas a cada nivel.' },
   { icon: 'fa-chalkboard-user',  text: 'Actividades pedagógicas y formación en aula.'        },
-  { icon: 'fa-person-walking',   text: 'Simulacros y prácticas en el patio del colegio.'     },
+  { icon: 'fa-person-walking',   text: 'Simulacros y prácticas.'                            },
   { icon: 'fa-handshake',        text: 'Apoyo de instituciones y la comunidad educativa.'    },
 ]
 
