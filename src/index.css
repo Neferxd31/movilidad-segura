@@ -105,4 +105,18 @@
   /* Timeline */
   .timeline-line { @apply relative pl-8 pb-8 border-l-2 border-slate-200 last:border-transparent last:pb-0; }
   .timeline-dot  { @apply absolute -left-2.5 top-1 w-5 h-5 rounded-full border-2 border-white shadow-sm; }
+
+  /* Carta que se voltea en 3D (juego de memoria) */
+  .flip-card  { perspective: 800px; }
+  .flip-inner {
+    @apply relative w-full h-full transition-transform duration-500;
+    transform-style: preserve-3d;
+  }
+  .flip-card.is-flipped .flip-inner { transform: rotateY(180deg); }
+  .flip-face {
+    @apply absolute inset-0 rounded-xl;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .flip-front { transform: rotateY(180deg); }
 }

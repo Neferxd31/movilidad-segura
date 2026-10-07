@@ -349,7 +349,7 @@ export default function Home() {
           </div>
 
           <div>
-            <Link to="/actividades" className="btn-green">
+            <Link to="/galeria" className="btn-green">
               <i className="fa-solid fa-arrow-right" /> Ver todas las actividades
             </Link>
           </div>
