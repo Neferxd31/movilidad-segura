@@ -37,8 +37,11 @@ const GAMES = [
   { id: 'memoria',  label: 'Memoria de señales', icon: 'fa-brain',         color: 'from-pink-500 to-rose-400',    Game: MemoryGame },
 ]
 
-// Enlaces de YouTube de la institución: se agregan aquí ({ title, url }) cuando los compartan
-const videos = []
+// Enlaces de YouTube de la institución: se agregan aquí ({ title, url })
+const videos = [
+  { title: 'Seguridad vial y normas de tráfico: cuento para niños', url: 'https://youtu.be/O3DDx53GEFE' },
+  { title: 'Escuela Pocoyó: aprende seguridad vial',                url: 'https://youtu.be/7nO1D2NYM6g' },
+]
 
 const PLACEHOLDER_VIDEOS = 3
 
