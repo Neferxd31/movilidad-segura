@@ -72,6 +72,8 @@ const cartillas = [
   { icon: 'fa-pencil',        color: 'icon-box-green',  label: 'Grado 1°',     desc: 'Reconocimiento de señales y comportamiento peatonal.' },
   { icon: 'fa-school-flag',   color: 'icon-box-yellow', label: 'Grados 2° y 3°', desc: 'Normas viales y responsabilidad en la movilidad.' },
   { icon: 'fa-graduation-cap',color: 'icon-box-red',    label: 'Grados 4° y 5°', desc: 'Comprensión avanzada de la cultura vial.' },
+  { icon: 'fa-bicycle',       color: 'icon-box-blue',   label: 'Grado 6°',     desc: 'Cartilla en preparación, disponible muy pronto.' },
+  { icon: 'fa-bus',           color: 'icon-box-green',  label: 'Grado 7°',     desc: 'Cartilla en preparación, disponible muy pronto.' },
 ]
 
 /* ─── Activities preview ───────────────────────────────── */
@@ -298,7 +300,7 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
             {cartillas.map((c, i) => (
               <FadeIn key={i} delay={i * 60}>
                 <div className="card text-center">
