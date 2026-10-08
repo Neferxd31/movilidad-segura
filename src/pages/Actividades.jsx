@@ -41,6 +41,7 @@ const GAMES = [
 const videos = [
   { title: 'Seguridad vial y normas de tráfico: cuento para niños', url: 'https://youtu.be/O3DDx53GEFE' },
   { title: 'Escuela Pocoyó: aprende seguridad vial',                url: 'https://youtu.be/7nO1D2NYM6g' },
+  { title: 'Canción de seguridad vial: ¡cruzamos seguros!',         url: 'https://youtu.be/c01rlE7VKT8' },
 ]
 
 const PLACEHOLDER_VIDEOS = 3
