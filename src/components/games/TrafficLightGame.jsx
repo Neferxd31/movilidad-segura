@@ -143,7 +143,7 @@ export default function TrafficLightGame() {
         <PedestrianLight light={light} />
 
         {/* Vista desde arriba: dos andenes, la calle y la cebra */}
-        <div className="relative flex-1 w-full h-64 rounded-2xl overflow-hidden bg-slate-300">
+        <div className="relative md:flex-1 w-full h-64 rounded-2xl overflow-hidden bg-slate-300">
           <div className="absolute inset-x-0 top-12 bottom-12 bg-slate-700" />
           <div
             className="absolute top-12 bottom-12 left-1/2 -translate-x-1/2 w-28"
