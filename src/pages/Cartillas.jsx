@@ -86,26 +86,21 @@ const cartillas = [
     pdf: '/pdf/1 CARTILLA 4 y 5  MOVILIDAD SEGURA (1).pdf',
   },
   {
-    id:       'sexto',
-    badge:    'Grado Sexto',
+    id:       'sexto-septimo',
+    badge:    'Grados Sexto y Séptimo',
     badgeClass:'badge-blue',
     icon:     'fa-bicycle',
     gradient: 'from-purple-600 to-purple-400',
-    title:    'Movilidad Segura – Grado 6°',
-    desc:     'Cartilla en preparación. Muy pronto estará disponible para consultar y descargar.',
-    topics:   [],
-    pdf:      null,
-  },
-  {
-    id:       'septimo',
-    badge:    'Grado Séptimo',
-    badgeClass:'badge-green',
-    icon:     'fa-bus',
-    gradient: 'from-teal-600 to-teal-400',
-    title:    'Movilidad Segura – Grado 7°',
-    desc:     'Cartilla en preparación. Muy pronto estará disponible para consultar y descargar.',
-    topics:   [],
-    pdf:      null,
+    title:    'Movilidad Segura – Grados 6° y 7°',
+    desc:     'Guía de trabajo para la básica secundaria con 18 temáticas sobre señalización, corresponsabilidad vial, valoración del riesgo y comprensión del entorno, con videos y actividades para desarrollar en clase.',
+    topics: [
+      'Señales reglamentarias, preventivas e informativas',
+      'Semáforo, cebra y puentes peatonales',
+      'Ceder el paso y exceso de velocidad',
+      'Peatón y ciclista como actores viales',
+      'Espacio público y accesibilidad',
+    ],
+    pdf: '/pdf/CARTILLA 6 y 7 MOVILIDAD SEGURA.pdf',
   },
 ]
 
@@ -162,46 +157,37 @@ export default function Cartillas() {
                     <h3 className="text-2xl font-heading font-bold text-brand-dark mb-3">{c.title}</h3>
                     <p className="text-slate-500 text-base leading-relaxed mb-6">{c.desc}</p>
 
-                    {c.topics.length > 0 && (
-                      <div className="mb-6">
-                        <h5 className="font-heading font-semibold text-brand-dark text-sm uppercase tracking-wider mb-3">
-                          Temas que incluye
-                        </h5>
-                        <ul className="grid sm:grid-cols-2 gap-2">
-                          {c.topics.map((topic, j) => (
-                            <li key={j} className="flex items-center gap-2 text-sm text-slate-600">
-                              <i className="fa-solid fa-check text-brand-green flex-shrink-0" />
-                              {topic}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                    <div className="mb-6">
+                      <h5 className="font-heading font-semibold text-brand-dark text-sm uppercase tracking-wider mb-3">
+                        Temas que incluye
+                      </h5>
+                      <ul className="grid sm:grid-cols-2 gap-2">
+                        {c.topics.map((topic, j) => (
+                          <li key={j} className="flex items-center gap-2 text-sm text-slate-600">
+                            <i className="fa-solid fa-check text-brand-green flex-shrink-0" />
+                            {topic}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
-                    {c.pdf ? (
-                      <div className="flex flex-wrap gap-3">
-                        <a
-                          href={c.pdf}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn-blue"
-                        >
-                          <i className="fa-solid fa-eye" /> Ver PDF
-                        </a>
-                        <a
-                          href={c.pdf}
-                          download
-                          className="btn-green"
-                        >
-                          <i className="fa-solid fa-download" /> Descargar
-                        </a>
-                      </div>
-                    ) : (
-                      <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold
-                                       bg-slate-100 text-slate-400 cursor-not-allowed">
-                        <i className="fa-solid fa-clock" /> Próximamente
-                      </span>
-                    )}
+                    <div className="flex flex-wrap gap-3">
+                      <a
+                        href={c.pdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-blue"
+                      >
+                        <i className="fa-solid fa-eye" /> Ver PDF
+                      </a>
+                      <a
+                        href={c.pdf}
+                        download
+                        className="btn-green"
+                      >
+                        <i className="fa-solid fa-download" /> Descargar
+                      </a>
+                    </div>
                   </div>
                 </div>
               </FadeIn>

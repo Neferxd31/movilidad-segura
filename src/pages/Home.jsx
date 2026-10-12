@@ -20,7 +20,7 @@ function FadeIn({ children, delay = 0, className = '' }) {
 /* ─── Stats data ───────────────────────────────────────── */
 const stats = [
   { number: '6°',   label: 'Grado Escolar',          icon: 'fa-school'         },
-  { number: '4',    label: 'Cartillas Educativas',   icon: 'fa-book-open'      },
+  { number: '5',    label: 'Cartillas Educativas',   icon: 'fa-book-open'      },
   { number: '6',    label: 'Actividades Realizadas', icon: 'fa-calendar-check' },
   { number: '100%', label: 'Compromiso Educativo',   icon: 'fa-heart'          },
 ]
@@ -72,8 +72,7 @@ const cartillas = [
   { icon: 'fa-pencil',        color: 'icon-box-green',  label: 'Grado 1°',     desc: 'Reconocimiento de señales y comportamiento peatonal.' },
   { icon: 'fa-school-flag',   color: 'icon-box-yellow', label: 'Grados 2° y 3°', desc: 'Normas viales y responsabilidad en la movilidad.' },
   { icon: 'fa-graduation-cap',color: 'icon-box-red',    label: 'Grados 4° y 5°', desc: 'Comprensión avanzada de la cultura vial.' },
-  { icon: 'fa-bicycle',       color: 'icon-box-blue',   label: 'Grado 6°',     desc: 'Cartilla en preparación, disponible muy pronto.' },
-  { icon: 'fa-bus',           color: 'icon-box-green',  label: 'Grado 7°',     desc: 'Cartilla en preparación, disponible muy pronto.' },
+  { icon: 'fa-bicycle',       color: 'icon-box-blue',   label: 'Grados 6° y 7°', desc: 'Señalización, corresponsabilidad vial y cuidado del entorno.' },
 ]
 
 /* ─── Activities preview ───────────────────────────────── */
@@ -300,10 +299,11 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+          {/* Cinco tarjetas: la fila incompleta queda centrada */}
+          <div className="flex flex-wrap justify-center gap-6 mb-10">
             {cartillas.map((c, i) => (
-              <FadeIn key={i} delay={i * 60}>
-                <div className="card text-center">
+              <FadeIn key={i} delay={i * 60} className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
+                <div className="card text-center h-full">
                   <div className={`${c.color} mx-auto`}><i className={`fa-solid ${c.icon}`} /></div>
                   <h4 className="font-heading font-bold text-brand-dark text-lg mb-2">{c.label}</h4>
                   <p className="text-slate-500 text-base leading-relaxed">{c.desc}</p>

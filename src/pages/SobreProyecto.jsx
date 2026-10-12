@@ -136,7 +136,7 @@ export default function SobreProyecto() {
               <div className="grid grid-cols-3 gap-3">
                 {[
                   { n: '6°', label: 'Grado',     color: 'text-brand-blue'  },
-                  { n: '4',  label: 'Cartillas', color: 'text-brand-green' },
+                  { n: '5',  label: 'Cartillas', color: 'text-brand-green' },
                   { n: '6',  label: 'Actividades',color: 'text-brand-red'  },
                 ].map((s, i) => (
                   <div key={i} className="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center">
