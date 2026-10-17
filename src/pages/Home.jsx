@@ -1,5 +1,7 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useInView } from '../hooks/useInView'
+import { albums } from '../data/albums'
 
 /* ─── Fade-in wrapper ──────────────────────────────────── */
 function FadeIn({ children, delay = 0, className = '' }) {
@@ -13,6 +15,92 @@ function FadeIn({ children, delay = 0, className = '' }) {
       } ${className}`}
     >
       {children}
+    </div>
+  )
+}
+
+/* ─── Carrusel de actividades (una foto por álbum de la galería) ─── */
+const SLIDE_MS = 5000
+
+function ActivityCarousel() {
+  const [index, setIndex]   = useState(0)
+  const [paused, setPaused] = useState(false)
+  const total = albums.length
+
+  // Avanza solo; se detiene mientras el mouse está encima
+  useEffect(() => {
+    if (paused) return
+    const id = setTimeout(() => setIndex(i => (i + 1) % total), SLIDE_MS)
+    return () => clearTimeout(id)
+  }, [index, paused, total])
+
+  const go = step => setIndex(i => (i + step + total) % total)
+
+  return (
+    <div
+      className="relative aspect-square sm:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-brand-dark"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      <div
+        className="flex h-full transition-transform duration-700 ease-in-out"
+        style={{ transform: `translateX(-${index * 100}%)` }}
+      >
+        {albums.map((a, i) => (
+          <div key={a.slug} className="relative w-full h-full flex-shrink-0 overflow-hidden" aria-hidden={i !== index}>
+            <img
+              src={`/img/galeria/portadas/${a.slug}.jpg`}
+              alt={a.label}
+              className={`absolute inset-0 w-full h-full object-cover transition-transform ease-out duration-[6000ms] ${
+                i === index ? 'scale-110' : 'scale-100'
+              }`}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 p-5 md:p-8 text-white">
+              <span className={`inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide
+                                px-3 py-1.5 rounded-full bg-gradient-to-r ${a.gradient} mb-3 shadow`}>
+                <i className={`fa-solid ${a.icon}`} /> {a.label}
+              </span>
+              <h3 className="font-heading font-bold text-lg md:text-2xl leading-snug mb-3 md:mb-4 drop-shadow">
+                {a.context.title}
+              </h3>
+              <Link to={`/galeria?album=${a.slug}`} className="btn-yellow" tabIndex={i === index ? 0 : -1}>
+                Ver actividad <i className="fa-solid fa-arrow-right" />
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <button
+        onClick={() => go(-1)}
+        aria-label="Actividad anterior"
+        className="absolute left-3 top-1/3 w-10 h-10 rounded-full bg-black/30 hover:bg-black/50 text-white
+                   backdrop-blur-sm transition-colors"
+      >
+        <i className="fa-solid fa-chevron-left" />
+      </button>
+      <button
+        onClick={() => go(1)}
+        aria-label="Actividad siguiente"
+        className="absolute right-3 top-1/3 w-10 h-10 rounded-full bg-black/30 hover:bg-black/50 text-white
+                   backdrop-blur-sm transition-colors"
+      >
+        <i className="fa-solid fa-chevron-right" />
+      </button>
+
+      <div className="absolute top-4 right-4 flex gap-1.5">
+        {albums.map((a, i) => (
+          <button
+            key={a.slug}
+            onClick={() => setIndex(i)}
+            aria-label={`Ver ${a.label}`}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              i === index ? 'w-6 bg-brand-yellow' : 'w-2 bg-white/60 hover:bg-white'
+            }`}
+          />
+        ))}
+      </div>
     </div>
   )
 }
@@ -137,45 +225,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Traffic light visual */}
-            <div className="hidden lg:flex justify-center items-center animate-float">
-              <div className="relative">
-                {/* Light pole */}
-                <div className="w-24 bg-slate-700/60 border border-white/10 rounded-2xl p-4 shadow-2xl backdrop-blur-sm">
-                  <div className="flex flex-col gap-4">
-                    {[
-                      { bg: 'bg-red-500',    shadow: 'shadow-red-500/60',    active: true  },
-                      { bg: 'bg-yellow-400', shadow: 'shadow-yellow-400/60', active: false },
-                      { bg: 'bg-green-500',  shadow: 'shadow-green-500/60',  active: false },
-                    ].map((dot, i) => (
-                      <div
-                        key={i}
-                        className={`w-14 h-14 rounded-full mx-auto ${dot.bg}
-                          ${dot.active ? `shadow-lg ${dot.shadow} animate-pulse2` : 'opacity-40'}`}
-                      />
-                    ))}
-                  </div>
-                </div>
-                {/* Floating tags */}
-                <div className="absolute -right-36 top-4 bg-white rounded-xl px-4 py-2.5 shadow-xl text-sm font-semibold text-brand-dark whitespace-nowrap
-                                transition-transform duration-300 hover:scale-110 hover:-translate-y-1 cursor-default animate-scale-in"
-                     style={{ animationDelay: '500ms' }}>
-                  <i className="fa-solid fa-stop text-red-500 mr-2" />
-                  ¡Alto!
-                </div>
-                <div className="absolute -right-40 top-24 bg-white rounded-xl px-4 py-2.5 shadow-xl text-sm font-semibold text-brand-dark whitespace-nowrap
-                                transition-transform duration-300 hover:scale-110 hover:-translate-y-1 cursor-default animate-scale-in"
-                     style={{ animationDelay: '650ms' }}>
-                  <i className="fa-solid fa-triangle-exclamation text-yellow-500 mr-2" />
-                  Precaución
-                </div>
-                <div className="absolute -right-36 top-44 bg-white rounded-xl px-4 py-2.5 shadow-xl text-sm font-semibold text-brand-dark whitespace-nowrap
-                                transition-transform duration-300 hover:scale-110 hover:-translate-y-1 cursor-default animate-scale-in"
-                     style={{ animationDelay: '800ms' }}>
-                  <i className="fa-solid fa-circle-check text-green-500 mr-2" />
-                  ¡Avanza!
-                </div>
-              </div>
+            {/* Carrusel con una foto de cada actividad */}
+            <div className="animate-fade-up" style={{ animationDelay: '300ms' }}>
+              <ActivityCarousel />
             </div>
           </div>
         </div>
