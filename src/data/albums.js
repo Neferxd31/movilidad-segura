@@ -18,6 +18,7 @@ export const albums = [
       title: 'Charla de Inicio: Importancia de la Movilidad Segura – Grado 6°',
       desc:  'Sesión introductoria con los estudiantes de grado 6°. Presentación del proyecto y sus objetivos a la comunidad escolar. Participaron docentes, estudiantes y directivos.',
     },
+    credit: 'Agentes de tránsito de Datrans – Villa del Rosario',
     items: [
       ...photos('charlas', 9),
       {
@@ -65,6 +66,7 @@ export const albums = [
       title: 'Simulacro de Cruce Peatonal – Colegio General Santander',
       desc:  'Caminata educativa por las calles cercanas al colegio, donde los estudiantes guiaron el cruce de peatones con señales de PARE y SIGA.',
     },
+    credit: 'Dirigido por el docente Julio German y los patrulleros escolares',
     items: photos('simulacro-peatonal', 5),
   },
   {
@@ -97,12 +99,14 @@ export const albums = [
         thumb: '/img/galeria/entrevistas/thumbs/entrevistas-01.jpg',
         poster: '/img/galeria/posters/entrevistas-01.jpg',
         video: true,
+        caption: 'Entrevista al docente Julio Rubio y debate',
       },
       {
         src: '/img/galeria/entrevistas/entrevistas-02.mp4',
         thumb: '/img/galeria/entrevistas/thumbs/entrevistas-02.jpg',
         poster: '/img/galeria/posters/entrevistas-02.jpg',
         video: true,
+        caption: 'Entrevista a la coordinadora de convivencia Yasmin Peña',
       },
     ],
   },

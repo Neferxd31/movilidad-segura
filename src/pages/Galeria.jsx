@@ -54,7 +54,7 @@ function Lightbox({ album, index, onClose, onMove }) {
       <div className="absolute inset-x-0 top-0 z-20 flex items-center justify-between gap-4 px-5 py-4 text-white">
         <div className="flex items-center gap-3 min-w-0">
           <i className={`fa-solid ${album.icon} text-brand-yellow`} />
-          <span className="font-heading font-semibold truncate">{album.label}</span>
+          <span className="font-heading font-semibold truncate">{item.caption ?? album.label}</span>
         </div>
         <div className="flex items-center gap-4">
           <span className="text-white/60 text-sm tabular-nums">{index + 1} / {album.items.length}</span>
@@ -184,28 +184,47 @@ export default function Galeria() {
               {/* Fotos del álbum: las filas incompletas se estiran para no dejar huecos */}
               <div className="flex flex-wrap gap-4">
                 {album.items.map((item, i) => (
-                  <button
-                    key={item.src}
-                    onClick={() => setPhotoIndex(i)}
-                    className={`group relative grow ${tileBasis(album.items.length)} h-40 sm:h-48 lg:h-56
-                                overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-all duration-300`}
-                  >
-                    <img
-                      src={item.thumb}
-                      alt={`${album.label} — foto ${i + 1}`}
-                      loading="lazy"
-                      className="absolute inset-0 w-full h-full object-cover transition-transform
-                                 duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors
-                                    duration-300 flex items-center justify-center">
-                      <i className={`fa-solid ${item.video ? 'fa-play' : 'fa-expand'} text-white text-2xl
-                                     ${item.video ? 'opacity-90' : 'opacity-0 group-hover:opacity-100'}
-                                     drop-shadow-lg transition-opacity duration-300`} />
-                    </div>
-                  </button>
+                  <div key={item.src} className={`grow ${tileBasis(album.items.length)}`}>
+                    {/* El fondo gris y el texto transparente evitan que se vea "foto 1" mientras carga */}
+                    <button
+                      onClick={() => setPhotoIndex(i)}
+                      className="group relative block w-full h-40 sm:h-48 lg:h-56 overflow-hidden rounded-xl
+                                 bg-slate-200 shadow-sm hover:shadow-lg transition-all duration-300"
+                    >
+                      <img
+                        src={item.thumb}
+                        alt={item.caption ?? `${album.label} — foto ${i + 1}`}
+                        loading="lazy"
+                        className="absolute inset-0 w-full h-full object-cover text-transparent transition-transform
+                                   duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors
+                                      duration-300 flex items-center justify-center">
+                        <i className={`fa-solid ${item.video ? 'fa-play' : 'fa-expand'} text-white text-2xl
+                                       ${item.video ? 'opacity-90' : 'opacity-0 group-hover:opacity-100'}
+                                       drop-shadow-lg transition-opacity duration-300`} />
+                      </div>
+                    </button>
+                    {item.caption && (
+                      <p className="mt-3 flex items-start gap-2 font-heading font-semibold text-brand-dark leading-snug">
+                        <i className={`fa-solid ${album.icon} text-brand-blue mt-1`} />
+                        {item.caption}
+                      </p>
+                    )}
+                  </div>
                 ))}
               </div>
+
+              {/* Quiénes dirigieron o acompañaron la actividad */}
+              {album.credit && (
+                <div className="mt-6 flex items-center gap-4 bg-white rounded-2xl border border-slate-100 shadow-sm px-6 py-5">
+                  <span className={`w-12 h-12 rounded-xl bg-gradient-to-br ${album.gradient} flex items-center
+                                    justify-center text-white text-xl flex-shrink-0`}>
+                    <i className="fa-solid fa-handshake" />
+                  </span>
+                  <p className="font-heading font-semibold text-brand-dark text-lg leading-snug">{album.credit}</p>
+                </div>
+              )}
             </>
           ) : (
             <>
